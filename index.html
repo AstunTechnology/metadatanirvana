@@ -52,27 +52,35 @@
 				</section>
 
 				<section>
-					<p>Introduction from Eoghan</p>
+					<h3>Meet the team</h3>
 				</section>
 
 				<section>
-					<h3>Question: What is nirvana, from a metadata perspective?</h3>
+					<p>Eoghan Hennessy</p>
+					<p class="fragment">Project Manager with responsibility for iShare in the Cloud and Metadata Enterprise Solutions</p>
+					<img width=200 src="./images/eoghan.jpg"/>
+				</section>
+
+				<section>
+					<p>Vickie White</p>
+					<p class="fragment">Sales Manager with responsibility for Central Government and Enterprise Solutions</p>
+					<img width=200 src="./images/vickie.JPG"/>
+				</section>
+
+				<section>
+					<p>Jo Cook</p>
+					<p class="fragment">Lead Metadata Consultant</p>
+					<img width=200 src="./images/jo.jpg"/>
+				</section>
+
+
+				<section>
+					<p>Question: What is nirvana, from a metadata perspective?</p>
 				</section>
 
 				<section>
 					<p>Answer: The ability to create metadata that has <span class="fragment sentence">real business use</span>, <span class="fragment sentence">quickly</span> and <span class="fragment sentence">easily</span></p>
-				</section>
-
-				<section>
-					<p>Question: How can metadata have <span class="fragment sentence">real business use?</span></p>
-				</section>
-
-				<section>
-					<p>Answer: By recording the <span class="fragment sentence">provenance</span>, <span class="fragment sentence">scope</span>, <span class="fragment sentence">quality</span> and <span class="fragment sentence">history</span> of data, <span class="fragment sentence">maintaining it's integrity</span></p>
-				</section>
-
-				<section>
-					<p>In turn that leads to <span class="fragment sentence">increased business efficiency</span>, <span class="fragment sentence">less wasted time</span>, and <span class="fragment sentence">better sharing and discovery of data</span></p>
+					<aside class="notes">What do we mean by "real business use"? If we know the provenance, scope, quality and history of the data we have a better idea of whether it's suitable for our needs. By recording the contact details, people can get it quickly and easily. This leads to increased business efficiency, less wasted time, and better sharing and discovery of data</aside>
 				</section>
 
 				<section>
@@ -83,40 +91,102 @@
 					<h3>What we're covering:</h3>
 					<ul>
 						<li class="fragment bold">A quick overview of GeoNetwork</li>
-						<li class="fragment bold">Some lesser-known features of the catalog</li>
-						<li class="fragment bold">An overview of Gemini 2.3</li>
-						<li class="fragment bold">Enhancements in the Gemini 2.3 plugin for GeoNetwork</li>
-						<li class="fragment bold">Some additional software you can hook in for even more features</li>
+						<li class="fragment bold">An overview of Gemini 2.3 metadata standard</li>
+						<li class="fragment bold">Additional features in the Gemini 2.3 plugin for GeoNetwork</li>
+						<li class="fragment bold">Non-spatial Metadata in GeoNetwork</li>
 					</ul>
 				</section>
 
 				<section>
 					<h3>GeoNetwork Overview</h3>
 					<p>GeoNetwork is the leading open source, standards-compliant metadata catalog, used globally for national and international spatial data infrastructures. It is run by a Project Steering Committee, comprising lead developers and users from around the world. </p>
+					<img src="./images/geonetworklogo.png">
 					</section>
 
 				<section>
 					<p>It's also an Open Source Geospatial Foundation project, which means it has passed a stringent incubation process focusing on code quality and sustainability. This in turn means it is reliable, has regular releases, and a strong support network.</p>
+					<img src="./images/osgeologo.png">
 				</section>
 
 				<section>
-					<p>GeoNetwork can be used for the creation and storage of both spatial and non-spatial metadata, which means it can act as a single point of truth for all your metadata requirements. It also provides endpoints for sharing metadata in both human and machine-readable formats.</p>
+					<p>GeoNetwork can be used for the creation and storage of both spatial and non-spatial metadata, and endpoints for sharing metadata in both human and machine-readable formats. It has a powerful interface for discovering and viewing metadata and data resources, and the creation, editing, and publication of metadata records.</p>
+					<p class="fragment"><a target="_blank" href="https://geonet38.astuntechnology.com/geonetwork/srv/eng/catalog.search">Let's take a look at the interface...</a></p>
+					<aside class="notes">Login as guest user. Look at search menu. Choose Police Neighbourhood Boundaries. Add to map with "view" button</aside>
 				</section>
 
 				<section>
-					<p>It provides a powerful <a target="_blank" href="https://geonet38.astuntechnology.com/geonetwork/srv/eng/catalog.search">interface</a> for discovering and viewing metadata and data resources, and the production and editing of metadata records. We're going to take a look at some of the less well-known features in GeoNetwork that help you create high-quality metadata quickly and easily.</p>
+					<h3>Gemini 2.3 overview</h3>
+					<p>Gemini 2.3 is the metadata standard for spatial metadata in the UK. It is compliant with international standards such as ISO19115 and INSPIRE. By using this standard for your metadata, you ensure the widest compatability for your metadata, and benefit from UK-specific guidance and support from the AGI Gemini Working Group.</p>
 				</section>
 
 				<section>
-					<h3>GeoNetwork "Hidden Features"</h3>
+					<p>Changes in Gemini 2.3</p>
 					<ul>
-						<li class="fragment bold">Suggestions: Check for quality, not validity</li>
-						<li class="fragment bold">Directories: Save elements for later use</li>
+						<li class="fragment bold">New elements (some optional, some mandatory)</li>
+						<li class="fragment bold">Changes to the encoding for some elements</li>
+						<li class="fragment bold">Some elements changing from optional to mandatory</li>
+						<li class="fragment bold">Renaming some elements</li>
+						<li class="fragment bold">Guidance changes throughout</li>
+					</ul>
+					<aside class="notes">Headlines- use and access constraints now encoded differently, conformity reports now mandatory</aside>
+				</section>
+
+				<section>
+					<p>The Gemini 2.3 plugin incorporates the technical standard, validation rules, and guidance into GeoNetwork, along with a customised editing interface, and some helper functions to make metadata creation easier. It was built by Astun with support from the core GeoNetwork development team, and is publicly available on GitHub.</p>
+					<img src="./images/metadata101.png">
+				</section>
+
+				<section>
+					<h3>Enhancements in the Gemini 2.3 plugin</h3>
+					<ul>
+						<li class="fragment bold">Better labelling and in-built guidance</li>
+						<li class="fragment bold">"Suggestions" for quality as well as validity</li>
+						<li class="fragment bold">"Inflate-Metadata" to ensure you don't miss or accidentally delete elements</li>
+						<li class="fragment bold">New templates</li>
+						<li class="fragment bold">Code snippets for contacts and conformity</li>
+					</ul>
+					<aside class="notes">Boundary Line record, edit to show suggestions. Try deleting "Topic Categories" to show inflate. Show code snippets for contacts and conformity</aside>
+				</section>
+
+				<section>
+					<h3>Non-spatial metadata</h3>
+					<p>Gemini 2.3 is for spatial metadata, but you can store non-spatial metadata in GeoNetwork too, in ISO19139 format. We've created a stripped down template that can be used to minimise the amount of data entry required, and GeoNetwork provides an endpoint compatible with data.gov.uk, so you can store all of your metadata in one location.</p>
+					<aside class="notes">Show Astun Christmas Card List record. Mention feedback as well</aside>
+				</section>
+
+
+				<section>
+					<h3>Putting it all into practice</h3>
+				</section>
+
+				<section>
+					<p>We provide metadata solutions and support to <a target="_blank" href="https://spatialdata.gov.scot/">Scottish Government</a>, <a target="_blank" href="https://environment.data.gov.uk/">DEFRA/EA</a> and numerous local authorities, from INSPIRE compliance and publication to data.gov.uk, through to enterprise-level discoverability.</p>
+				</section>
+
+				<section>
+					<p>The business benefits of this approach can be summarised as follows:</p>
+					<ul>
+						<li class="fragment bold">Our solution enables better decision making through use of appropriate data</li>
+						<li class="fragment bold">Litigation resulting from data errors or user assumptions is reduced</li>
+						<li class="fragment bold">We support collaboration by simplifying access to data when needed</li>
+						<li class="fragment bold">We ensure data transparency and break down silos</li>
 					</ul>
 				</section>
 
 				<section>
-					<p>End chat from Vickie</p>
+					<p>To take this a stage further, the Astun hosted solution offers the following additional benefits:</p>
+					<ul>
+						<li class="fragment bold">Cloud-based, with no local implementation</li>
+						<li class="fragment bold">Secure, resilient and scalable, with performance monitoring</li>
+						<li class="fragment bold">Integration with GIS platforms such as QGIS, ArcGIS, MapInfo</li>
+						<li class="fragment bold">Dashboard statistics and linked service monitoring</li>
+						<li class="fragment bold">Version control, auditing and roll-back</li>
+						<li class="fragment bold">Automated updates and/or reminders</li>
+					</ul>
+
+				<section>
+					<h3>Questions?</h3>
+					<p>Contact sales@astuntechnology.com for more details</p>
 				</section>
 				
 			</div>
