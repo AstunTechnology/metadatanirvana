@@ -57,20 +57,20 @@
 
 				<section>
 					<p>Eoghan Hennessy</p>
-					<p class="fragment">Project Manager with responsibility for iShare in the Cloud and Metadata Enterprise Solutions</p>
 					<img width=200 src="./images/eoghan.jpg"/>
+					<p class="fragment">Project Manager with responsibility for iShare in the Cloud and Metadata Enterprise Solutions</p>
 				</section>
 
 				<section>
 					<p>Vickie White</p>
-					<p class="fragment">Sales Manager with responsibility for Central Government and Enterprise Solutions</p>
 					<img width=200 src="./images/vickie.JPG"/>
+					<p class="fragment">Sales Manager with responsibility for Central Government and Enterprise Solutions</p>
 				</section>
 
 				<section>
 					<p>Jo Cook</p>
-					<p class="fragment">Lead Metadata Consultant</p>
 					<img width=200 src="./images/jo.jpg"/>
+					<p class="fragment">Lead Metadata Consultant</p>
 				</section>
 
 
@@ -117,23 +117,25 @@
 				<section>
 					<h3>Gemini 2.3 overview</h3>
 					<p>Gemini 2.3 is the metadata standard for spatial metadata in the UK. It is compliant with international standards such as ISO19115 and INSPIRE. By using this standard for your metadata, you ensure the widest compatability for your metadata, and benefit from UK-specific guidance and support from the AGI Gemini Working Group.</p>
+					<aside class="notes">Not just about publishing to data.gov.uk, but about ensuring interoperability with colleagues in other organisations or countries. Floods have no respect for boundaries on a map!</aside>
 				</section>
 
 				<section>
 					<p>Changes in Gemini 2.3</p>
 					<ul>
 						<li class="fragment bold">New elements (some optional, some mandatory)</li>
-						<li class="fragment bold">Changes to the encoding for some elements</li>
 						<li class="fragment bold">Some elements changing from optional to mandatory</li>
+						<li class="fragment bold">Changes to the encoding for some elements</li>
 						<li class="fragment bold">Renaming some elements</li>
 						<li class="fragment bold">Guidance changes throughout</li>
 					</ul>
-					<aside class="notes">Headlines- use and access constraints now encoded differently, conformity reports now mandatory</aside>
+					<aside class="notes">New mandatory- spatial representation type, file identifier, quality scope, new optional- parent identifier (datasets in series), prev optional- conformity, encoding - use and access constraints, renamed resource identifier, maintenance information</aside>
 				</section>
 
 				<section>
 					<p>The Gemini 2.3 plugin incorporates the technical standard, validation rules, and guidance into GeoNetwork, along with a customised editing interface, and some helper functions to make metadata creation easier. It was built by Astun with support from the core GeoNetwork development team, and is publicly available on GitHub.</p>
 					<img src="./images/metadata101.png">
+					<aside class="notes">By building it as a separate plugin, records can be stored in different variants of ISO19139 or Gemini (2.2 or 2.3) and converted when ready</aside>
 				</section>
 
 				<section>
@@ -142,16 +144,16 @@
 						<li class="fragment bold">Better labelling and in-built guidance</li>
 						<li class="fragment bold">"Suggestions" for quality as well as validity</li>
 						<li class="fragment bold">"Inflate-Metadata" to ensure you don't miss or accidentally delete elements</li>
-						<li class="fragment bold">New templates</li>
-						<li class="fragment bold">Code snippets for contacts and conformity</li>
+						<li class="fragment bold">New templates for datasets, series and services</li>
+						<li class="fragment bold">Code snippets for contact details and conformity reports</li>
 					</ul>
 					<aside class="notes">Boundary Line record, edit to show suggestions. Try deleting "Topic Categories" to show inflate. Show code snippets for contacts and conformity</aside>
 				</section>
 
 				<section>
 					<h3>Non-spatial metadata</h3>
-					<p>Gemini 2.3 is for spatial metadata, but you can store non-spatial metadata in GeoNetwork too, in ISO19139 format. We've created a stripped down template that can be used to minimise the amount of data entry required, and GeoNetwork provides an endpoint compatible with data.gov.uk, so you can store all of your metadata in one location.</p>
-					<aside class="notes">Show Astun Christmas Card List record. Mention feedback as well</aside>
+					<p>Gemini 2.3 is for <span class="fragment sentence">spatial</span> metadata, but you can store <span class="fragment sentence">non-spatial</span> metadata in GeoNetwork too. Working with DEFRA/EA, we've created a stripped down template to minimise the amount of data entry required, and configured an endpoint for publishing non-spatial metadata to data.gov.uk, so you can store all of your metadata in one location.</p>
+					<aside class="notes">Show Astun Christmas Card List record. Mention feedback as well. Then hand over to Vickie</aside>
 				</section>
 
 
@@ -160,34 +162,37 @@
 				</section>
 
 				<section>
-					<p>We provide metadata solutions and support to <a target="_blank" href="https://spatialdata.gov.scot/">Scottish Government</a>, <a target="_blank" href="https://environment.data.gov.uk/">DEFRA/EA</a> and numerous local authorities, from INSPIRE compliance and publication to data.gov.uk, through to enterprise-level discoverability.</p>
+					<p>We provide metadata solutions and support to <a target="_blank" href="https://spatialdata.gov.scot/">Scottish Government</a>, <a target="_blank" href="https://environment.data.gov.uk/">DEFRA/EA</a> and numerous local authorities, from INSPIRE compliance and publication to data.gov.uk, through to enterprise-level discoverability and interoperability.</p>
 				</section>
 
 				<section>
-					<p>The business benefits of this approach can be summarised as follows:</p>
+					<h3>Recapping the business benefits:</h3>
 					<ul>
-						<li class="fragment bold">Our solution enables better decision making through use of appropriate data</li>
-						<li class="fragment bold">Litigation resulting from data errors or user assumptions is reduced</li>
-						<li class="fragment bold">We support collaboration by simplifying access to data when needed</li>
-						<li class="fragment bold">We ensure data transparency and break down silos</li>
+						<li class="fragment bold">Our solution enables better decision making through use of appropriate data,</li>
+						<li class="fragment bold">Reduces litigation resulting from data errors or user assumptions,</li>
+						<li class="fragment bold">Supports collaboration by simplifying access to data when needed,</li>
+						<li class="fragment bold">Ensures data transparency and breaks down silos.</li>
 					</ul>
 				</section>
 
 				<section>
-					<p>To take this a stage further, the Astun hosted solution offers the following additional benefits:</p>
+					<h3>The Astun hosted solution offers the following additional benefits:</h3>
+				</section>
+
+				<section>
 					<ul>
-						<li class="fragment bold">Cloud-based, with no local implementation</li>
-						<li class="fragment bold">Secure, resilient and scalable, with performance monitoring</li>
-						<li class="fragment bold">Integration with GIS platforms such as QGIS, ArcGIS, MapInfo</li>
-						<li class="fragment bold">Dashboard statistics and linked service monitoring</li>
+						<li class="fragment bold">Cloud-based, with no local implementation,</li>
+						<li class="fragment bold">Secure, resilient and scalable, with performance monitoring,</li>
+						<li class="fragment bold">Integration with GIS platforms such as QGIS, ArcGIS, MapInfo, and of course iShare,</li>
+						<li class="fragment bold">Dashboard statistics and monitoring of linked services (WxS),</li>
 						<li class="fragment bold">Version control, auditing and roll-back</li>
-						<li class="fragment bold">Automated updates and/or reminders</li>
+						<li class="fragment bold">Automated updates and/or reminders.</li>
 					</ul>
 				</section>
 
 				<section>
-					<h3>Questions?</h3>
-					<p>Contact sales@astuntechnology.com for more details</p>
+					<h3>Any questions?</h3>
+					<p>or contact sales@astuntechnology.com for more details</p>
 				</section>
 				
 			</div>
